@@ -6,7 +6,25 @@
     <title>CSS Selectors</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        /* * SELETOR UNIVERSAL */
+        /* .tag SELETOR DE CLASSE */
+        /* #id SELETOR DE ID */
+        /* #id > div SELETOR QUE PEGA O PRIMEIRO ELEMENTO div APÓS O SELETOR #id */
+        /* p + ul SELETOR DE IRMÃOS QUE ESTÃO ADJACENTES UM LOGO APÓS O OUTRO */
+        /* P ~ ul SELETOR DE IRMÃOS GENERICOS, PEGA TODOS OS IRMÃOS ul DENTRO DO PAI p */
+        /* [propriedade] SELETOR QUE PEGA PELA PROPRIEDADE NA TAG */
+        /* [propriedade = valor] SELETOR QUE PEGA A PROPRIEDADE PELO VALOR*/
+        /* [propriedade ~= valor] SELETOR QUE PEGA PARTE DE VALORES SE TIVER SEPARADO POR ESPAÇO*/
+        /* [propriedade *= valor] SELETOR QUE PEGA PARTE DE VALORES QUE ESTÁ CONTIDO (PARTE PARCIAL DO VALOR)*/
+        /* span:nth-child(1) SELETOR QUE PEGA O PRIMEIRO FILHO ASSOCIADO A TAG*/
+        /* section > :nth-child(odd) SELETOR QUE PEGA OS FILHOS IMPARES DENTRO DA TAG*/
+        /* section > :nth-child(even) SELETOR QUE PEGA OS FILHOS PARES DENTRO DA TAG*/
+        /*  section > span:nth-of-type(2) SELETOR QUE PEGA O SEGUNDO ELEMENTO DENTRO DA TAG QUE SEJA UM span */
+
+        section > :nth-child(odd){
+            color: #ff0;
+            background-color: #f77;
+        }
     </style>
 </head>
 
@@ -29,7 +47,7 @@
             </ol>
             <div id='aninhado' class='tag'>
                 <div class="tag">
-                    <section class='tag'>
+                    <section class='tag nolabel'>
                         <span class='tag'>1</span>
                         <p class='tag'>2</p>
                         <span class='tag'>3</span>
