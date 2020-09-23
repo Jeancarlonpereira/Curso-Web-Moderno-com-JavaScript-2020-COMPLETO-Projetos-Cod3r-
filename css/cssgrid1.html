@@ -22,6 +22,40 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+
+        body {
+            display: grid;
+            grid-template-columns: 50% 50%; /* define daus colunas, cada uma ocupando 50% do espaço total*/
+            grid-template-columns: repeat(4, 8.33% 8.33% 8.33%) /* repete 4 vezes, criando 3 colunas de 8.33% */;
+            grid-template-columns: repeat(4, 8.33%); /* repete 4 vezes, criando uma coluna de 8.33%*/
+            grid-template-columns: repeat(11, 100px) 100px; /* cria 11 colunas com 100px (repetindo) e uma com 100px (sem repetir)*/
+            grid-template-columns: 200px 20% 1fr; /* Cria uam coluna com 200px, uma com 20% e a outra com o resto que sobrar*/
+            grid-template-columns: 3fr 6fr 3fr; /*divide o tamnho entre as partes definidas em cada coluna (3/12), (6/12) e (3/12) nesse caso são 12 colunas*/
+            grid-template-rows: 50% 25% 12.5% 12.5%; /* ajusta o tamanho das linhas de cada coluna, o tamnho definido com as respectivas porcentagens*/
+            grid-template-rows: 100px 1fr; /* ajusta o tamaho das linhas, a primeira com 100px a segunda com o "espaço restante" e a terceira e quarta com o tamnho só pra caber o conteudo dentro*/
+            grid-template-rows: 100px auto; /*ajusta o tamnho das linhas, a primira com 100px e as demais com o msm tamanho entre si, por ser auto*/
+            /* gap: 20px; */
+        }
+
+        .d8{
+            grid-column-start: 2; /* nessa coluna, define que ela começa a partir da coluna 2 do grid*/
+            grid-column-end: 4; /* nessa coluna, define que ela termina na coluna 4 do grid*/
+            grid-column-end: span 2; /*significa que a partir de onde foi definida vai ocupar mais duas colunas seguintes*/
+            grid-row-start: 3; /* nessa linha, define que ela começa a partir da linha 3 do grid*/
+            grid-row-end: 5; /* nessa linha, define que ela termina na linha 5 do grid*/
+            grid-row-end: span 2;/*significa que a partir de onde foi definida vai ocupar mais duas linhas seguintes*/
+        }
+
+        .d10, .d11{
+            /* podem se sobrepor */
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 5;
+        }
+
+        .d10{
+            z-index: 10; /*define o index de elevação do elemento do grid, quando houver sobreposição, pode ser definido qual elemento vai ser mostrado*/
+        } 
     </style>
 </head>
 
